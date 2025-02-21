@@ -2,8 +2,9 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# define global parameters and variables
-DEVELOPER_NAME = "Nez"
+# define global parameters adn variables
+
+DEVELOPER_NAME = "NEZ"
 
 # define environment
 ENVIRONMENT = "AWS"
@@ -32,8 +33,7 @@ def main_post():
         return render_template('index.html', developer_name=DEVELOPER_NAME, not_valid=False)
 
 if __name__ == '__main__':
-
     if ENVIRONMENT == "LOCAL":
         app.run(debug=True)
-    else:
+    else:  
         app.run(host='0.0.0.0', port=80)
